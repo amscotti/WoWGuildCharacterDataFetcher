@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "WoWGuildCharacterDataFetcher"
+version = "0.1.0"
+description = ""
+authors = ["Anthony Scotti <anthony.m.scotti@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.8.4"
+dash = "^2.9.3"
+pandas = "^2.0.0"
+duckdb = "^0.7.1"
+python-dotenv = "^1.0.0"
+pydantic = "^1.10.7"
+rich = "^13.3.4"
+gunicorn = "^20.1.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.262"
+mypy = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.10"
+strict_optional = true
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+exclude = "(.venv/|venv/)"
+files = "./**/*.py"
+
+[tool.ruff]
+line-length = 110
